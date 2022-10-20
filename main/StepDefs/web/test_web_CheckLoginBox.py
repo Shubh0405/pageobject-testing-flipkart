@@ -1,14 +1,13 @@
 import os, sys
 sys.path.insert(0, os.path.abspath(".."))
 
-import pytest
 from pytest_bdd import *
 from main.utils.drivers import Driver
-from main.Pages.web_homepage import WebHomePage
+from main.Pages.web.homepage import WebHomePage
 import time
 
 
-scenarios("../Features/Web_CheckLoginBox.feature")
+scenarios("../../Features/web/CheckLoginBox.feature")
 
 @given(u'launch chrome browser')
 def LaunchChromeBrowser(context):
